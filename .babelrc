@@ -1,0 +1,28 @@
+  
+{
+  "presets": [
+    ["@babel/preset-react", { "useBuiltIns": "usage" }],
+    [
+      "@babel/preset-env",
+      {
+        "corejs": 3,
+        "modules": false,
+        "exclude": ["@babel/plugin-transform-typeof-symbol"],
+        "loose": true,
+        "useBuiltIns": "usage",
+        "targets": {
+          "esmodules": true
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "corejs": 3
+      }
+    ],
+    "@babel/plugin-syntax-dynamic-import"
+  ]
+}
